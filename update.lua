@@ -63,7 +63,7 @@ function formatTranscript(url, transcript)
 
 	db = db + 1
 
-	print(('%s/%s - %s Downloaded'):format(diff - #queue, diff, url))
+	print(('%s/%s - %s Downloaded'):format(diff - #queue + 1, diff, url))
 
 	if #transcripts == db then
 		require('fs').writeFileSync('transcripts.json', require('json').encode(database))
